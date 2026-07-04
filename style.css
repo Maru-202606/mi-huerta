@@ -1,6 +1,10 @@
 body {
   font-family: sans-serif;
   background-color: rgb(178, 192, 153);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ocupa al menos el 100% de la altura de la ventana */
+  margin: 0;
 }
 
 .mi-header {
@@ -110,6 +114,18 @@ p {
   max-height: 150px; /* Esto es lo más importante: altura fija */
   object-fit: cover;
   overflow: hidden;
+}
+
+.conteiner {
+  flex: 1; /*esto hace que el contenedor crezca para llenar el espacio vacio*/
+}
+
+/*footer queda abajo automaticamente*/
+footer {
+  flex-shrink: 0;
+  margin-top: auto; /*empuja el footer al fondo */
+  padding: 20px; /* espacio dentro del footer */
+  background-color: #f8f9fa; /* O el color que uso */
 }
 
 /* Ajuste de contenedor y visualización completa */
